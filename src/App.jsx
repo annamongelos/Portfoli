@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import {
     FiSun,
     FiGlobe,
@@ -45,7 +45,7 @@ export default function App() {
                     />
 
                     <h1 className="text-4xl font-extrabold mb-2 tracking-tight">
-                        Hello, I am <span className="text-[#111]">Your Name</span>
+                        Hola, sóc l' <span className="text-[#111]">Anna</span>
                     </h1>
 
                     <span className="inline-block bg-white border px-4 py-1 rounded-full shadow-sm text-sm mb-6">
@@ -53,18 +53,24 @@ export default function App() {
                     </span>
 
                     <p className="text-xl leading-relaxed mb-10 text-[#333]">
-                        <strong className="text-[#d12d42]">1 any d'experiència</strong> as a developer. I am dedicated to
-                        frontend development with <strong className="text-[#d12d42]">TypeScript and React</strong>. I have experience
-                        working with C# using Unity.
+                        <strong className="text-[#d12d42]">1 any d'experiència</strong> sóc estudiant del grau de Matemàtiques Computacionals i Anàlisis de dades.
+                        <strong className="text-[#d12d42]">TypeScript and React</strong>. Tinc experiencia amb 
+                        C++, Python, SQL, AWS, R.
                     </p>
 
                     {/* SOCIAL BUTTONS */}
                     <div className="flex flex-col gap-4 w-full max-w-md mx-auto">
-                        <a className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md text-lg" href="#">
+                        <a
+                            className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md text-lg"
+                            href="https://www.linkedin.com/in/anna-mongelos-amill/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <FiLinkedin className="text-2xl" /> Linkedin
                         </a>
 
-                        <a className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md text-lg" href="#">
+
+                        <a className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md text-lg" href="https://github.com/annamongelos">
                             <FiGithub className="text-2xl" /> GitHub
                         </a>
 
@@ -100,8 +106,8 @@ export default function App() {
 
                         <div className="bg-white p-6 rounded-2xl shadow-md">
                             <h3 className="text-2xl font-semibold">Unity Developer</h3>
-                            <p className="text-[#555] mb-2">Game Studio · 2016 – 2020</p>
-                            <p>Developed game systems using C#, physics, UI and tooling workflows.</p>
+                            <p className="text-[#555] mb-2">blabla</p>
+                            <p>blalba</p>
                         </div>
                     </div>
                 </motion.section>
@@ -119,8 +125,8 @@ export default function App() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                         {/* PROJECT CARD */}
                         <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between">
-                            <h3 className="text-2xl font-semibold mb-2">Project One</h3>
-                            <p className="text-[#555] mb-4">A short description of the project and its purpose.</p>
+                            <h3 className="text-2xl font-semibold mb-2">Project de Fi de Grau</h3>
+                            <p className="text-[#555] mb-4">Predicció de l'alfuencia del Festiva Cruilla.'.</p>
                             <a href="#" className="flex items-center gap-2 text-[#d12d42] font-medium">
                                 View project <FiArrowUpRight />
                             </a>
