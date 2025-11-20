@@ -22,8 +22,8 @@ export default function App() {
                 <header className="flex justify-between items-center max-w-5xl mx-auto mb-10">
                     <nav className="flex gap-10 text-lg font-medium">
                         <a href="#home" className="hover:opacity-60 transition">Home</a>
-                        <a href="#experience" className="hover:opacity-60 transition">Experience</a>
-                        <a href="#projects" className="hover:opacity-60 transition">Projects</a>
+                        <a href="#experience" className="hover:opacity-60 transition">Experiencia</a>
+                        <a href="#projects" className="hover:opacity-60 transition">Projectes</a>
                     </nav>
                     <div className="flex gap-4 text-2xl">
                         <button><FiSun /></button>
@@ -41,21 +41,21 @@ export default function App() {
                     <img
                         src={profilePic}
                         alt="profile"
-                        className="w-24 h-24 sm:w-20 sm:h-20 rounded-full mx-auto mb-6 object-cover"
+                        className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto mb-6 object-cover"
+
                     />
 
                     <h1 className="text-4xl font-extrabold mb-2 tracking-tight">
-                        Hola, sóc l' <span className="text-[#111]">Anna</span>
+                        Hola, soc l' <span className="text-[#111]">Anna</span>
                     </h1>
 
                     <span className="inline-block bg-white border px-4 py-1 rounded-full shadow-sm text-sm mb-6">
-                        Available for work
+                        Preparada per a treballar
                     </span>
 
                     <p className="text-xl leading-relaxed mb-10 text-[#333]">
-                        <strong className="text-[#d12d42]">1 any d'experiència</strong> sóc estudiant del grau de Matemàtiques Computacionals i Anàlisis de dades.
-                        <strong className="text-[#d12d42]">TypeScript and React</strong>. Tinc experiencia amb 
-                        C++, Python, SQL, AWS, R.
+                        <strong className="text-[#d12d42]">1 any d'experiencia</strong> soc estudiant del grau de Matematiques Computacionals i Analisis de dades.
+                       . Tinc experiencia amb C++, Python, SQL, AWS, R.
                     </p>
 
                     {/* SOCIAL BUTTONS */}
@@ -92,15 +92,15 @@ export default function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl font-bold mb-8">Experience</h2>
+                    <h2 className="text-3xl font-bold mb-8">Experiencia</h2>
 
-                    <div className="flex flex-col gap-6">
+                    {/*<div className="flex flex-col gap-6">*/}
+                    <div className="bg-red-500">
                         <div className="bg-white p-6 rounded-2xl shadow-md">
-                            <h3 className="text-2xl font-semibold">Frontend Developer</h3>
-                            <p className="text-[#555] mb-2">Company Name · 2020 – Present</p>
+                            <h3 className="text-2xl font-semibold">Sinergia TIC</h3>
+                            <p className="text-[#555] mb-2">Octubre 2025 - Present</p>
                             <p>
-                                Working with React, TypeScript, TailwindCSS, UI architecture and performance
-                                optimization.
+                               Treballant amb CRM i SDA.
                             </p>
                         </div>
 
@@ -120,13 +120,13 @@ export default function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl font-bold mb-12">Projects</h2>
+                    <h2 className="text-3xl font-bold mb-12">Projectes</h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                         {/* PROJECT CARD */}
                         <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between">
-                            <h3 className="text-2xl font-semibold mb-2">Project de Fi de Grau</h3>
-                            <p className="text-[#555] mb-4">Predicció de l'alfuencia del Festiva Cruilla.'.</p>
+                            <h3 className="text-2xl font-semibold mb-2">Treball de Fi de Grau</h3>
+                            <p className="text-[#555] mb-4">Prediccio de l'alfuencia del Festiva Cruilla.</p>
                             <a href="#" className="flex items-center gap-2 text-[#d12d42] font-medium">
                                 View project <FiArrowUpRight />
                             </a>
@@ -146,7 +146,7 @@ export default function App() {
 
             {/* FOOTER */}
             <footer className="text-center text-[#777] py-10 border-t">
-                © {new Date().getFullYear()} Your Name — All rights reserved.
+                © {new Date().getFullYear()} Anna Mongelos Amill - All rights reserved.
             </footer>
         </div>
     );
