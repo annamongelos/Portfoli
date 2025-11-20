@@ -1,4 +1,4 @@
- import React from "react";
+import React from "react";
 import {
     FiSun,
     FiGlobe,
@@ -41,12 +41,12 @@ export default function App() {
                     <img
                         src={profilePic}
                         alt="profile"
-                        className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto mb-6 object-cover"
+                        className="w-32 h-32 sm:w-40 sm:h-40 md:w-38 md:h-38 rounded-full mx-auto mb-6 object-cover"
 
                     />
 
                     <h1 className="text-4xl font-extrabold mb-2 tracking-tight">
-                        Hola, soc l' <span className="text-[#111]">Anna</span>
+                        Hola, soc l'<span className="text-[#111]">Anna Mongelos Amill</span>
                     </h1>
 
                     <span className="inline-block bg-white border px-4 py-1 rounded-full shadow-sm text-sm mb-6">
@@ -55,7 +55,7 @@ export default function App() {
 
                     <p className="text-xl leading-relaxed mb-10 text-[#333]">
                         <strong className="text-[#d12d42]">1 any d'experiencia</strong> soc estudiant del grau de Matematiques Computacionals i Analisis de dades.
-                       . Tinc experiencia amb C++, Python, SQL, AWS, R.
+                        . Tinc experiencia amb C++, Python, SQL, AWS, R.
                     </p>
 
                     {/* SOCIAL BUTTONS */}
@@ -94,21 +94,20 @@ export default function App() {
                 >
                     <h2 className="text-3xl font-bold mb-8">Experiencia</h2>
 
-                    {/*<div className="flex flex-col gap-6">*/}
-                    <div className="bg-red-500">
+                    <div className="flex flex-col gap-6">
                         <div className="bg-white p-6 rounded-2xl shadow-md">
                             <h3 className="text-2xl font-semibold">Sinergia TIC</h3>
                             <p className="text-[#555] mb-2">Octubre 2025 - Present</p>
                             <p>
-                               Treballant amb CRM i SDA.
+                                Treballant amb CRM i SDA.
                             </p>
                         </div>
-
+                        {/* 
                         <div className="bg-white p-6 rounded-2xl shadow-md">
                             <h3 className="text-2xl font-semibold">Unity Developer</h3>
                             <p className="text-[#555] mb-2">blabla</p>
                             <p>blalba</p>
-                        </div>
+                        </div>*/}
                     </div>
                 </motion.section>
 
@@ -131,14 +130,14 @@ export default function App() {
                                 View project <FiArrowUpRight />
                             </a>
                         </div>
-
+                        {/*
                         <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between">
                             <h3 className="text-2xl font-semibold mb-2">Project Two</h3>
                             <p className="text-[#555] mb-4">A short description of the project and its purpose.</p>
                             <a href="#" className="flex items-center gap-2 text-[#d12d42] font-medium">
                                 View project <FiArrowUpRight />
                             </a>
-                        </div>
+                        </div>*/ }
                     </div>
                 </motion.section>
 
