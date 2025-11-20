@@ -1,0 +1,147 @@
+import React from "react";
+import {
+    FiSun,
+    FiGlobe,
+    FiLinkedin,
+    FiGithub,
+    FiMail,
+    FiDownload,
+    FiArrowUpRight,
+} from "react-icons/fi";
+import { motion } from "framer-motion";
+import profilePic from "./assets/profile.jpg";
+
+export default function App() {
+    return (
+        <div className="flex flex-col bg-[#f4f4f6] text-[#1a1a1a] font-sans min-h-screen">
+
+            {/* MAIN CONTENT */}
+            <main className="px-6 py-10">
+
+                {/* NAVBAR */}
+                <header className="flex justify-between items-center max-w-5xl mx-auto mb-10">
+                    <nav className="flex gap-10 text-lg font-medium">
+                        <a href="#home" className="hover:opacity-60 transition">Home</a>
+                        <a href="#experience" className="hover:opacity-60 transition">Experience</a>
+                        <a href="#projects" className="hover:opacity-60 transition">Projects</a>
+                    </nav>
+                    <div className="flex gap-4 text-2xl">
+                        <button><FiSun /></button>
+                        <button><FiGlobe /></button>
+                    </div>
+                </header>
+
+                {/* HERO SECTION */}
+                <motion.section
+                    id="home"
+                    className="flex flex-col items-center text-center py-10"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                >
+                    <img
+                        src={profilePic}
+                        alt="profile"
+                        className="w-24 h-24 sm:w-20 sm:h-20 rounded-full mx-auto mb-6 object-cover"
+                    />
+
+                    <h1 className="text-4xl font-extrabold mb-2 tracking-tight">
+                        Hello, I am <span className="text-[#111]">Your Name</span>
+                    </h1>
+
+                    <span className="inline-block bg-white border px-4 py-1 rounded-full shadow-sm text-sm mb-6">
+                        Available for work
+                    </span>
+
+                    <p className="text-xl leading-relaxed mb-10 text-[#333]">
+                        <strong className="text-[#d12d42]">1 any d'experiència</strong> as a developer. I am dedicated to
+                        frontend development with <strong className="text-[#d12d42]">TypeScript and React</strong>. I have experience
+                        working with C# using Unity.
+                    </p>
+
+                    {/* SOCIAL BUTTONS */}
+                    <div className="flex flex-col gap-4 w-full max-w-md mx-auto">
+                        <a className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md text-lg" href="#">
+                            <FiLinkedin className="text-2xl" /> Linkedin
+                        </a>
+
+                        <a className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md text-lg" href="#">
+                            <FiGithub className="text-2xl" /> GitHub
+                        </a>
+
+                        <a className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md text-lg" href="#">
+                            <FiMail className="text-2xl" /> Email
+                        </a>
+
+                        <a className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md text-lg" href="#">
+                            <FiDownload className="text-2xl" /> Curriculum Vitae
+                        </a>
+                    </div>
+                </motion.section>
+
+                {/* EXPERIENCE SECTION */}
+                <motion.section
+                    id="experience"
+                    className="max-w-4xl mx-auto mb-32"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                >
+                    <h2 className="text-3xl font-bold mb-8">Experience</h2>
+
+                    <div className="flex flex-col gap-6">
+                        <div className="bg-white p-6 rounded-2xl shadow-md">
+                            <h3 className="text-2xl font-semibold">Frontend Developer</h3>
+                            <p className="text-[#555] mb-2">Company Name · 2020 – Present</p>
+                            <p>
+                                Working with React, TypeScript, TailwindCSS, UI architecture and performance
+                                optimization.
+                            </p>
+                        </div>
+
+                        <div className="bg-white p-6 rounded-2xl shadow-md">
+                            <h3 className="text-2xl font-semibold">Unity Developer</h3>
+                            <p className="text-[#555] mb-2">Game Studio · 2016 – 2020</p>
+                            <p>Developed game systems using C#, physics, UI and tooling workflows.</p>
+                        </div>
+                    </div>
+                </motion.section>
+
+                {/* PROJECTS SECTION */}
+                <motion.section
+                    id="projects"
+                    className="max-w-5xl mx-auto mb-32"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                >
+                    <h2 className="text-3xl font-bold mb-12">Projects</h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        {/* PROJECT CARD */}
+                        <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between">
+                            <h3 className="text-2xl font-semibold mb-2">Project One</h3>
+                            <p className="text-[#555] mb-4">A short description of the project and its purpose.</p>
+                            <a href="#" className="flex items-center gap-2 text-[#d12d42] font-medium">
+                                View project <FiArrowUpRight />
+                            </a>
+                        </div>
+
+                        <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between">
+                            <h3 className="text-2xl font-semibold mb-2">Project Two</h3>
+                            <p className="text-[#555] mb-4">A short description of the project and its purpose.</p>
+                            <a href="#" className="flex items-center gap-2 text-[#d12d42] font-medium">
+                                View project <FiArrowUpRight />
+                            </a>
+                        </div>
+                    </div>
+                </motion.section>
+
+            </main>
+
+            {/* FOOTER */}
+            <footer className="text-center text-[#777] py-10 border-t">
+                © {new Date().getFullYear()} Your Name — All rights reserved.
+            </footer>
+        </div>
+    );
+}
