@@ -1,0 +1,15 @@
+# dependències i builds
+node_modules
+dist
+dist-ssr
+*.local
+
+# logs
+*.log
+npm-debug.log*
+
+# editors i sistema
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
