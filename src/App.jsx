@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { FiSun, FiMoon, FiGithub, FiLinkedin, FiMail, FiDownload, FiArrowUpRight } from 'react-icons/fi'
-import { LINKS, REPOS, TAGS, SKILLS, T } from './data'
-import profilePic from './assets/profile.jpg'
+import { LINKS, REPOS, TAGS, T } from './data'
+import profilePic from './assets/profile.jpeg'
 
 const SECTIONS = ['about', 'experience', 'projects', 'education', 'contact']
 
@@ -112,15 +112,15 @@ export default function App() {
           <img
             src={profilePic}
             alt="Anna Mongelos Amill"
-            width="240" height="320"
-            className="order-1 mx-auto h-64 w-52 rounded-t-full rounded-b-2xl border border-line object-cover object-[50%_25%] md:order-2 md:h-80 md:w-60"
+            width="240" height="240"
+            className="order-1 mx-auto aspect-square w-52 rounded-full border-4 border-accent object-cover object-[50%_22%] md:order-2 md:w-60"
           />
         </section>
 
         {/* SOBRE MI */}
         <section id="about" className="max-w-2xl pb-16">
           <Heading>{t.nav.about}</Heading>
-          {t.about.map((p) => <p key={p} className="mb-4 text-lg leading-relaxed text-muted">{p}</p>)}
+          <p className="text-lg leading-relaxed text-muted">{t.about}</p>
         </section>
 
         {/* EXPERIÈNCIA */}
@@ -186,35 +186,14 @@ export default function App() {
 
           <h3 className="mb-4 mt-12 font-serif text-2xl font-bold">{t.skills}</h3>
           <dl className="grid gap-x-6 gap-y-3 sm:grid-cols-[10rem_1fr]">
-            {SKILLS.map(([k, v]) => (
+            {t.skillList.map(([k, v]) => (
               <div key={k} className="contents">
-                <dt className="font-semibold">{t.skillLabels[k]}</dt>
+                <dt className="font-semibold">{k}</dt>
                 <dd className="text-muted">{v}</dd>
               </div>
             ))}
-            <div className="contents">
-              <dt className="font-semibold">{t.skillLabels.sec}</dt>
-              <dd className="text-muted">{t.secText}</dd>
-            </div>
           </dl>
 
-          <div className="mt-12 grid gap-10 sm:grid-cols-[1fr_1.6fr]">
-            <div>
-              <h3 className="mb-3 font-serif text-2xl font-bold">{t.langs}</h3>
-              <ul className="divide-y divide-line">
-                {t.langList.map(([n, l]) => (
-                  <li key={n} className="flex justify-between py-2"><span>{n}</span><span className="text-muted">{l}</span></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="mb-3 font-serif text-2xl font-bold">{t.vol}</h3>
-              <p className="font-semibold">{t.volItem.title}</p>
-              <p className="text-sm text-muted">{t.volItem.date}</p>
-              <p className="mb-2 italic text-accent">{t.volItem.org}</p>
-              <p className="text-muted">{t.volItem.text}</p>
-            </div>
-          </div>
         </section>
 
         {/* CONTACTE */}
